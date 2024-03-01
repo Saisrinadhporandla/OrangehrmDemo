@@ -3,21 +3,18 @@ package stepDefinations;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
 import org.junit.After;
-import org.junit.Assert;
-import pageObjects.HolidaysList;
+import Validator.DateVerification;
 import pageObjects.LeavePage;
 import pageObjects.LoginPage;
 import utilities.TestUtil;
 
-import java.time.Duration;
 import java.util.logging.Logger;
 
 public class Steps extends TestBase
 {	
 
-	HolidaysList holidaysList;
+	DateVerification dateVerification;
 	LeavePage leavePage;
 
 	
@@ -53,9 +50,9 @@ public class Steps extends TestBase
 	}
 	@Then("user verifies given date of holiday")
 	public void userVerifiesGivenDateOfHoliday() throws InterruptedException {
-		holidaysList=new HolidaysList(driver);
-		TestUtil.waitForVisibilityofElement(driver,20,holidaysList.container);
-		holidaysList.verifyDate();
+		dateVerification =new DateVerification(driver);
+		TestUtil.waitForVisibilityofElement(driver,20, dateVerification.container);
+		dateVerification.verifyDate();
 
 	}
 	@After

@@ -1,12 +1,8 @@
 
 package stepDefinations;
 
-import Validator.DateVerification;
 import org.openqa.selenium.WebDriver;
-import pageObjects.HolidaysList;
-import pageObjects.LeavePage;
 import pageObjects.LoginPage;
-import utilities.TestUtil;
 
 import java.util.logging.Logger;
 
